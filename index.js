@@ -25,5 +25,5 @@ async function run() {
 
   core.setOutput('registry', `https://${domain}-${owner}.d.codeartifact.${region}.amazonaws.com`);
   core.setOutput('auth-token', authToken);
-  core.setSecret(authToken);
+  // core.setSecret(authToken);
 }
