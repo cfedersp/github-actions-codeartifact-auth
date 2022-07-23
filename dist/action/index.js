@@ -1885,7 +1885,7 @@ async function run() {
     durationSeconds: duration
   });
 
-  core.debug(`AWS CodeArtifact Login(Auth) ${domain}-${owner}`);
+  core.debug(`::debug:: AWS CodeArtifact Login(Auth) ${domain}-${owner}`);
 
   const response = await client.send(authCommand);
   const authToken = response.authorizationToken;
@@ -1896,8 +1896,8 @@ async function run() {
   core.setOutput('registry', `https://${domain}-${owner}.d.codeartifact.${region}.amazonaws.com`);
   core.setOutput('auth-token', authToken);
   // core.setSecret(authToken);
-  console.log(`https://${domain}-${owner}.d.codeartifact.${region}.amazonaws.com`);
-  console.log(authToken.length);
+  core.debug(`::debug:: https://${domain}-${owner}.d.codeartifact.${region}.amazonaws.com`);
+  core.debug(`::debug:: ${authToken.length}`);
 }
 
 
