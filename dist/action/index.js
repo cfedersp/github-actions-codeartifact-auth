@@ -1877,6 +1877,7 @@ async function run() {
   const owner = core.getInput('owner', { required: true });
   const duration = core.getInput('duration', { required: false });
   const repo = core.getInput('codeartifact-repo', { required: true });
+  throw Error('stop here');
 
   const client = new codeArtifact.CodeartifactClient({ region: region });
   const authCommand = new codeArtifact.GetAuthorizationTokenCommand({
