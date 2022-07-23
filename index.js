@@ -1,5 +1,5 @@
-import * as core from '@actions/core';
-import * as codeArtifact from '@actions/client-codeartifact';
+const core = require('@actions/core');
+const codeArtifact = require('@aws-sdk/client-codeartifact');
 
 async function run() {
   const region = core.getInput('region', { required: true });
