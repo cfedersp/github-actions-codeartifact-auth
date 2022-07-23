@@ -17,7 +17,7 @@ inputs:
     default: '900'
     description: 'Session duration'
     required: false
-  repo:
+  codeartifact-repo:
     description: 'CodeArtifact Repository Name'
     required: true
 outputs:

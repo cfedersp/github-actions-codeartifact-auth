@@ -7,7 +7,7 @@ async function run() {
   const domain = core.getInput('domain', { required: true });
   const owner = core.getInput('owner', { required: true });
   const duration = core.getInput('duration', { required: false });
-  const repo = core.getInput('repo', { required: true });
+  const repo = core.getInput('codeartifact-repo', { required: true });
 
   const client = new codeArtifact.CodeartifactClient({ region: region });
   const authCommand = new codeArtifact.GetAuthorizationTokenCommand({
