@@ -12,7 +12,7 @@ async function run() {
 
   const client = new codeArtifact.CodeartifactClient({ region: region });
   const authCommand = new codeArtifact.GetAuthorizationTokenCommand({
-    domain: domain,
+    domain: 'dne',
     domainOwner: '12345',
     durationSeconds: duration
   });
