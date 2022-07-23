@@ -4,15 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "package": "ncc build index.js -o dist/action && ncc build cleanup.js -o dist/cleanup"
+    "package": "ncc build index.js -o dist/action"
   },
   "dependencies": {
     "@actions/core": "^1.2.7",
     "@actions/exec": "^1.0.4",
-    "@actions/io": "^1.1.0",
     "@aws-sdk/client-codeartifact": "^3.14.0",
     "aws-sdk": "^2.902.0",
-    "fs": "^0.0.1-security",
     "node": "^16.1.0"
   },
   "devDependencies": {
